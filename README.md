@@ -22,4 +22,4 @@
 Muhammad Rijal Aditya (2210010148)
 
 ### Demo Aplikasi
-![App Screenshot]([https://github.com/Rijal0321/AplikasiPenghitungUmur/blob/main/img/Latihan%202%20Demo.gif](https://github.com/Rijal0321/AplikasiPertambahanDuaAngka/blob/main/img/Latihan%201.gif))
+![App Screenshot](https://github.com/Rijal0321/AplikasiPertambahanDuaAngka/blob/main/img/Latihan%201.gif)
