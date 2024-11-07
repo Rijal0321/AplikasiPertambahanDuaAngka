@@ -1,12 +1,7 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.*;
 
-/**
- *
- * @author User
- */
 public class PertambahanDuaAngkaFrame extends javax.swing.JFrame {
 
     /**
@@ -46,13 +41,12 @@ public class PertambahanDuaAngkaFrame extends javax.swing.JFrame {
 
         jLabel3.setText("Hasil :");
 
-        txtAngka2.addActionListener(new java.awt.event.ActionListener() {
+        btnTambah.setText("Tambah");
+        btnTambah.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtAngka2ActionPerformed(evt);
+                btnTambahActionPerformed(evt);
             }
         });
-
-        btnTambah.setText("Tambah");
 
         btnHapus.setText("Hapus");
 
@@ -132,9 +126,17 @@ public class PertambahanDuaAngkaFrame extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void txtAngka2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtAngka2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtAngka2ActionPerformed
+    private void btnTambahActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTambahActionPerformed
+        try {
+            double angka1 = Double.parseDouble(txtAngka1.getText());
+            double angka2 = Double.parseDouble(txtAngka2.getText());
+            double hasil = angka1 + angka2;
+            txtHasil.setText(String.valueOf(hasil));
+        } catch (NumberFormatException ex) {
+            JOptionPane.showMessageDialog(null, "Input harus berupa angka!", "Error", JOptionPane.ERROR_MESSAGE);
+        }
+    }
+    }//GEN-LAST:event_btnTambahActionPerformed
 
     /**
      * @param args the command line arguments
