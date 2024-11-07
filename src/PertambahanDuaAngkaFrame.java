@@ -41,12 +41,28 @@ public class PertambahanDuaAngkaFrame extends javax.swing.JFrame {
 
         jLabel3.setText("Hasil :");
 
+        txtAngka1.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                txtAngka1FocusGained(evt);
+            }
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                txtAngka1FocusLost(evt);
+            }
+        });
         txtAngka1.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 txtAngka1KeyTyped(evt);
             }
         });
 
+        txtAngka2.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                txtAngka2FocusGained(evt);
+            }
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                txtAngka2FocusLost(evt);
+            }
+        });
         txtAngka2.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 txtAngka2KeyTyped(evt);
@@ -185,6 +201,22 @@ public class PertambahanDuaAngkaFrame extends javax.swing.JFrame {
         evt.consume(); 
     }        
     }//GEN-LAST:event_txtAngka2KeyTyped
+
+    private void txtAngka1FocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtAngka1FocusGained
+    txtAngka1.setText("");
+    }//GEN-LAST:event_txtAngka1FocusGained
+
+    private void txtAngka2FocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtAngka2FocusGained
+    txtAngka2.setText("");
+    }//GEN-LAST:event_txtAngka2FocusGained
+
+    private void txtAngka1FocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtAngka1FocusLost
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtAngka1FocusLost
+
+    private void txtAngka2FocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtAngka2FocusLost
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtAngka2FocusLost
 
     /**
      * @param args the command line arguments
