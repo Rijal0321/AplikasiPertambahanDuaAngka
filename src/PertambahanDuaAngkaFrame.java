@@ -41,6 +41,18 @@ public class PertambahanDuaAngkaFrame extends javax.swing.JFrame {
 
         jLabel3.setText("Hasil :");
 
+        txtAngka1.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtAngka1KeyTyped(evt);
+            }
+        });
+
+        txtAngka2.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtAngka2KeyTyped(evt);
+            }
+        });
+
         btnTambah.setText("Tambah");
         btnTambah.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -159,6 +171,20 @@ public class PertambahanDuaAngkaFrame extends javax.swing.JFrame {
     private void btnKeluarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnKeluarActionPerformed
          System.exit(0);
     }//GEN-LAST:event_btnKeluarActionPerformed
+
+    private void txtAngka1KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtAngka1KeyTyped
+    char c = evt.getKeyChar();
+    if (!Character.isDigit(c) && c != '.') {
+        evt.consume(); 
+    }
+    }//GEN-LAST:event_txtAngka1KeyTyped
+
+    private void txtAngka2KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtAngka2KeyTyped
+    char c = evt.getKeyChar();
+    if (!Character.isDigit(c) && c != '.') {
+        evt.consume(); 
+    }        
+    }//GEN-LAST:event_txtAngka2KeyTyped
 
     /**
      * @param args the command line arguments
