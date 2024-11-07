@@ -49,6 +49,11 @@ public class PertambahanDuaAngkaFrame extends javax.swing.JFrame {
         });
 
         btnHapus.setText("Hapus");
+        btnHapus.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnHapusActionPerformed(evt);
+            }
+        });
 
         btnKeluar.setText("Keluar");
 
@@ -135,8 +140,16 @@ public class PertambahanDuaAngkaFrame extends javax.swing.JFrame {
         } catch (NumberFormatException ex) {
             JOptionPane.showMessageDialog(null, "Input harus berupa angka!", "Error", JOptionPane.ERROR_MESSAGE);
         }
-    }
+    
     }//GEN-LAST:event_btnTambahActionPerformed
+
+    private void btnHapusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnHapusActionPerformed
+        txtAngka1.setText("");
+        txtAngka2.setText("");
+        txtHasil.setText("");
+        txtAngka1.requestFocus();
+ 
+    }//GEN-LAST:event_btnHapusActionPerformed
 
     /**
      * @param args the command line arguments
